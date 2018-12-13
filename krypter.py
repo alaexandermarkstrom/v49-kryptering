@@ -1,4 +1,4 @@
-key = 12 # här kan komplexiteten av programmet ökas, vilken chiffer är det?
+key = 12
 options = 0
 letters = []
 
@@ -9,14 +9,14 @@ while True: #loop meny
         print("skriv 1-3 endast")
     if options == 1:
         letters = []
-        word = input("input här")
+        word = input("input här\n>")
         for letter in word:
-            letters.append(ord(letter) + key) # (kryptera) ta en bokstav i taget från variabel "word" och omvandla den till ett nummer och + key (100 + 12 = 112)
+            letters.append(ord(letter) + key) #kryptera med key 12
         print(letters)
     elif options == 2:
         crypt = []
         for l in letters:
-            crypt.append(chr(l -key)) # avkryptera
-        print(crypt) # hur skriver du ut det här som en sträng
+            crypt.append(chr(l -key)) #avkryptera
+        print(crypt)
     elif options == 3:
         break
